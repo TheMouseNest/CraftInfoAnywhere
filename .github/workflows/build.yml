@@ -13,17 +13,6 @@ on:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        type: [retail, classic, mists]
-        include:
-          - type: retail
-            pkgmeta: .pkgmeta_retail
-          - type: classic
-            pkgmeta: .pkgmeta_vanilla
-          - type: mists
-            pkgmeta: .pkgmeta_mists
-
     runs-on: ubuntu-latest
 
     steps:
@@ -33,6 +22,6 @@ jobs:
 
     - uses: BigWigsMods/packager@master
       with:
-        args: -p 865814 -a nGvppv6x -g ${{matrix.type}} -m ${{matrix.pkgmeta}}
+        args: -p 865814
       env:
         CF_API_KEY: ${{ secrets.plusmouse_curseforge }}
