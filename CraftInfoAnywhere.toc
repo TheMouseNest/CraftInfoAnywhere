@@ -1,4 +1,4 @@
-## Interface: 120000
+## Interface: 120001, 50503, 20505, 11508
 ## Title: Craft Info Anywhere
 ## Notes: Shows the cost (more or less) of crafting an item and the minimum reagents
 ## Version: @project-version@
@@ -21,6 +21,16 @@ Objects.lua
 Locales.lua
 SlashCmd.lua
 Config.lua
-Data_Mainline.lua
-Main_Mainline.lua
+
+Data_Mainline.lua [AllowLoadGameType mainline]
+Main_Mainline.lua [AllowLoadGameType mainline]
+
+Data_Vanilla.lua [AllowLoadGameType vanilla]
+Data_TBC.lua [AllowLoadGameType tbc]
+Data_Wrath.lua [AllowLoadGameType wrath]
+Data_Cata.lua [AllowLoadGameType cata]
+Data_Mists.lua [AllowLoadGameType mists]
+
+Main_Classic.lua [AllowLoadGameType classic]
+
 API.lua
